@@ -15,7 +15,7 @@ func isValid(s string) bool {
  
       if ! isClosed  {
          stack = append(stack, char)
-      } else if len(pruefStapel) == 0 {
+      } else if len(stack) == 0 {
          return false
       } else if stack[len(stack)-1] == expectedOpen {
             stack = stack[:len(stack)-1]
