@@ -2,26 +2,26 @@
 
 func isValid(s string) bool {
  
-    pruefStapel := make([]byte, 0, len(s))
+    stack := make([]byte, 0, len(s))
  
-    klammernpaare := map[byte]byte{
+    pairs := map[byte]byte{
         ')':'(',
         ']':'[',
         '}':'{',
     }
  
    for _, char := range []byte(s) {
-         expectedOpen , isClosed := klammernpaare[char]
+         expectedOpen , isClosed := pairs[char]
  
       if ! isClosed  {
-         pruefStapel = append( pruefStapel, char)
+         stack = append(stack, char)
       } else if len(pruefStapel) == 0 {
          return false
-      } else if pruefStapel[len(pruefStapel)-1] == expectedOpen {
-            pruefStapel = pruefStapel[:len(pruefStapel)-1]
+      } else if stack[len(stack)-1] == expectedOpen {
+            stack = stack[:len(stack)-1]
         } else {
             return false
         } 
       } 
-   return len(pruefStapel) == 0
+   return len(stack) == 0
 }
