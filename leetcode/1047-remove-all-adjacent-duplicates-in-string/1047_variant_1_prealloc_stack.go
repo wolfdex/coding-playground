@@ -1,3 +1,5 @@
+package main
+
 // https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string/
 
 func removeDuplicates(s string) string {
