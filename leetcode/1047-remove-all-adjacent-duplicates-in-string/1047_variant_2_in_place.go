@@ -1,3 +1,5 @@
+package main
+
 // https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string/
 
 // removeDuplicates removes all adjacent duplicates using an in-place two-pointer approach.
